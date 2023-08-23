@@ -1,7 +1,6 @@
 #pragma once
 
 #include <iostream>
-#include <math.h>
 
 using namespace  std;
 
@@ -9,7 +8,7 @@ using namespace  std;
 /// <summary>
 /// Basic class for a neuron
 /// </summary>
-class Neuron
+class Neuron2
 {
 public:
 
@@ -18,7 +17,7 @@ public:
 	/// Initializes a new instance of the <see cref="Neuron"/> class.
 	/// </summary>
 	/// <param name="val">The value of Neuron.</param>
-	Neuron(double val);
+	Neuron2(double val);
 
 	/// <summary>
 	/// Fast sigmoid function.\n
@@ -79,4 +78,3 @@ private:
 	double derivedValue;
 
 };
-
