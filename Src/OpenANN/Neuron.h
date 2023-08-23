@@ -60,6 +60,7 @@ public:
 		return derivedValue;
 	}
 
+	void setValue(double value);
 private:
 	/// <summary>
 	/// The real value of neuron.
