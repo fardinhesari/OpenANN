@@ -37,28 +37,19 @@ public:
 	/// Gets the value.
 	/// </summary>
 	/// <returns></returns>
-	double getValue() const
-	{
-		return value;
-	}
+	double getValue() const	{return value;}
 
 	/// <summary>
 	/// Gets the activated value.
 	/// </summary>
 	/// <returns></returns>
-	double getActivatedValue() const
-	{
-		return activatedValue;
-	}
+	double getActivatedValue() const {return activatedValue;}
 
 	/// <summary>
 	/// Gets the derived value.
 	/// </summary>
 	/// <returns></returns>
-	double getDerivedValue() const
-	{
-		return derivedValue;
-	}
+	double getDerivedValue() const {return derivedValue;}
 
 	void setValue(double value);
 private:

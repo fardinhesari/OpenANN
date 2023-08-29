@@ -1,15 +1,15 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../../Src/OpenANN/Neuron.cpp"
+#include "../../Src/OpenANN/Neuron.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
 namespace OpenANNTests
 {
-	TEST_CLASS(OpenANNTests)
+	TEST_CLASS(NeuronClassTests)
 	{
 	public:
-		
+
 		TEST_METHOD(NeuronClassShouldInitializeRightWithGivenValue)
 		{
 			Neuron n1(0.9);
