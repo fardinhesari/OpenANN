@@ -1,4 +1,6 @@
 #include "NeuralNetwork.h"
+
+#include <utility>
 #include "Matrix.h"
 #include "vector"
 #include "Layer.h"
@@ -83,4 +85,30 @@ void NeuralNetwork::feedForward()
 			setNeuronValue(i + 1, j, c->getValue(0, j));
 		}
 	}
+}
+
+void NeuralNetwork::setErrors()
+{
+	if(target.empty())
+	{
+		throw new exception("No Target for neural network");
+	}
+	
+	if (target.size() != layers.at(layers.size() - 1)->getNeurons().size())
+	{
+		throw new exception("Target size differs from last layer size");
+	}
+
+	errors.clear();
+	error = 0;
+	int outputLayerIndex = layers.size() - 1;
+	auto outputNeurons = layers.at(outputLayerIndex)->getNeurons();
+	for (int i = 0; i < target.size(); i++)
+	{
+		double tempErr = outputNeurons.at(i)->getActivatedValue() - target.at(i);
+		errors.push_back(tempErr);
+		error += tempErr;
+	}
+
+	historicalErrors.push_back(error);
 }

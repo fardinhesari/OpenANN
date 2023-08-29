@@ -23,6 +23,8 @@ public:
 	/// <param name="value">The value.</param>
 	void setValue(int index, double value);
 
+
+
 	/// <summary>
 	/// Creates the matrix corresponding to values.
 	/// </summary>
@@ -42,7 +44,10 @@ public:
 	/// <returns></returns>
 	Matrix* CreateMatrixOfDerivedValues();
 
-	
+	vector<Neuron*> getNeurons() const
+	{
+		return neurons;
+	}
 
 private:
 	/// <summary>

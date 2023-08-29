@@ -21,7 +21,7 @@ Matrix* utils::MatrixMultiply::execute()
 	{
 		for (int j = 0; j < b->getNumberOfColumns(); j++)
 		{
-			for (int k = 0; k < b->getNumberOfColumns(); k++)
+			for (int k = 0; k < b->getNumberOfRows(); k++)
 			{
 				auto p = a->getValue(i, k) * b->getValue(k, j);
 				auto newVal = c->getValue(i, j) + p;

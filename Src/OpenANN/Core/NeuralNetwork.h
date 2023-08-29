@@ -19,13 +19,18 @@ public:
 	/// <param name="input">The input values.</param>
 	void setCurrentInput(vector<double> input);
 
+	
+	void setCurrentTarget(vector<double> target){ this->target = std::move(target); }
+
 	void printToConsole();
 
-	Matrix* getNeuronMatrix(int index) { return layers.at(index)->CreateMatrixOfValues(); }
-	Matrix* getActivatedNeuronMatrix(int index) { return layers.at(index)->CreateMatrixOfActivatedValues(); }
-	Matrix* getDerivedNeuronMatrix(int index) { return layers.at(index)->CreateMatrixOfDerivedValues(); }
+	Matrix* getNeuronMatrix(int index) const { return layers.at(index)->CreateMatrixOfValues(); }
 
-	Matrix* getWeightMatrix(int index) { return weightMatrices.at(index); }
+	Matrix* getActivatedNeuronMatrix(int index) const { return layers.at(index)->CreateMatrixOfActivatedValues(); }
+
+	Matrix* getDerivedNeuronMatrix(int index) const { return layers.at(index)->CreateMatrixOfDerivedValues(); }
+
+	Matrix* getWeightMatrix(int index) const { return weightMatrices.at(index); }
 
 	void setNeuronValue(int layerIndex, int neuronIndex, double value) { layers.at(layerIndex)->setValue(neuronIndex, value); }
 
@@ -34,8 +39,18 @@ public:
 	/// </summary>
 	void feedForward();
 
+	/// <summary>
+	/// Sets the errors.
+	/// </summary>
+	void setErrors();
+
+	double getError() const { return error; }
+
+	vector<double> getErrors() { return errors; }
+
 private:
 	int topologySize;
+
 	vector<int> topology;
 
 	vector<Layer*> layers;
@@ -43,5 +58,14 @@ private:
 	vector<Matrix*> weightMatrices;
 
 	vector<double> input;
+
+	vector<double> target;
+
+	double error;
+
+	vector<double> errors;
+
+	vector<double> historicalErrors;
+
 };
 
