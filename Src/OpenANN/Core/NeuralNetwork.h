@@ -22,6 +22,12 @@ public:
 	void printToConsole();
 
 	Matrix* getNeuronMatrix(int index) { return layers.at(index)->CreateMatrixOfValues(); }
+	Matrix* getActivatedNeuronMatrix(int index) { return layers.at(index)->CreateMatrixOfActivatedValues(); }
+	Matrix* getDerivedNeuronMatrix(int index) { return layers.at(index)->CreateMatrixOfDerivedValues(); }
+
+	Matrix* getWeightMatrix(int index) { return weightMatrices.at(index); }
+
+	void setNeuronValue(int layerIndex, int neuronIndex, double value) { layers.at(layerIndex)->setValue(neuronIndex, value); }
 
 	/// <summary>
 	/// Feeds forward the neural network one iteration.

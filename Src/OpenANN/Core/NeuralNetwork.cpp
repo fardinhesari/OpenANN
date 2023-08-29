@@ -2,6 +2,7 @@
 #include "Matrix.h"
 #include "vector"
 #include "Layer.h"
+#include "../Utils/MatrixMultiply.h"
 
 
 NeuralNetwork::NeuralNetwork(vector<int> topology)
@@ -54,5 +55,24 @@ void NeuralNetwork::feedForward()
 {
 	for (int i = 0; i < (layers.size() - 1); i++)
 	{
+		Matrix* a;
+
+		if (i == 0)
+		{
+			a = getNeuronMatrix(i);
+		}
+		else
+		{
+			a = getActivatedNeuronMatrix(i);
+		}
+
+		auto b = getWeightMatrix(i);
+
+		auto c = (new utils::MatrixMultiply(a, b))->execute();
+
+		for (int j = 0; j < c->getNumberOfColumns(); j++)
+		{
+			setNeuronValue(i + 1, j, c->getValue(0, j));
+		}
 	}
 }
