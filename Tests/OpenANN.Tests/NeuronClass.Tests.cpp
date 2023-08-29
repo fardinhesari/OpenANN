@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../../Src/OpenANN/Neuron.h"
+#include "../../Src/OpenANN/Core/Neuron.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 

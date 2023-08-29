@@ -21,6 +21,12 @@ public:
 
 	void printToConsole();
 
+	Matrix* getNeuronMatrix(int index) { return layers.at(index)->CreateMatrixOfValues(); }
+
+	/// <summary>
+	/// Feeds forward the neural network one iteration.
+	/// </summary>
+	void feedForward();
 
 private:
 	int topologySize;

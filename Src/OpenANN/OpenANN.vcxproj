@@ -23,6 +23,8 @@
     <ClInclude Include="Core\Matrix.h" />
     <ClInclude Include="Core\NeuralNetwork.h" />
     <ClInclude Include="Core\Neuron.h" />
+    <ClInclude Include="Utils\MatrixMultiply.h" />
+    <ClInclude Include="Utils\MatrixToVector.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Core\Layer.cpp" />
@@ -30,6 +32,8 @@
     <ClCompile Include="Core\Matrix.cpp" />
     <ClCompile Include="Core\NeuralNetwork.cpp" />
     <ClCompile Include="Core\Neuron.cpp" />
+    <ClCompile Include="Utils\MatrixMultiply.cpp" />
+    <ClCompile Include="Utils\MatrixToVector.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

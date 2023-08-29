@@ -49,3 +49,10 @@ void NeuralNetwork::printToConsole()
 		}
 	}
 }
+
+void NeuralNetwork::feedForward()
+{
+	for (int i = 0; i < (layers.size() - 1); i++)
+	{
+	}
+}

@@ -1,6 +1,6 @@
 #include "pch.h"
 #include "CppUnitTest.h"
-#include "../../Src/OpenANN/Matrix.h"
+#include "../../Src/OpenANN/Core/Matrix.h"
 
 using namespace Microsoft::VisualStudio::CppUnitTestFramework;
 
