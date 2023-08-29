@@ -48,6 +48,14 @@ void NeuralNetwork::printToConsole()
 			auto m = layers.at(i)->CreateMatrixOfActivatedValues();
 			m->printToConsole();
 		}
+
+
+		if (i < layers.size() - 1)
+		{
+			cout << endl << "Weights: " << endl;
+			getWeightMatrix(i)->printToConsole();
+		}
+		cout << "---------------" << endl;
 	}
 }
 
