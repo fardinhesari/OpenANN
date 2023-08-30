@@ -19,6 +19,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Core\Activators\Activator.h" />
     <ClInclude Include="Core\Layer.h" />
     <ClInclude Include="Core\Matrix.h" />
     <ClInclude Include="Core\NeuralNetwork.h" />
