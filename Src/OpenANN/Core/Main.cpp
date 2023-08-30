@@ -26,11 +26,19 @@ int main(int argc, char** argv)
 	nn->printToConsole();
 
 	cout << "--------------" << endl << "New Matrix:" << endl;
-	nn->feedForward();
-	nn->setErrors();
-	nn->printToConsole();
 
-	cout << endl << endl << "Error:\t" << nn->getError() << endl;
+	int counter = 0;
+	do
+	{
+		counter++;
+		nn->feedForward();
+		cout << "Epoch:\t" << counter << endl;
+		nn->setErrors();
+		nn->backPropagate();
+		cout << endl << endl << "Error:\t" << nn->getError() << endl;
+	} while (abs(nn->getError()) > 0.05);
+
+	nn->printToConsole();
 
 	return 0;
 }

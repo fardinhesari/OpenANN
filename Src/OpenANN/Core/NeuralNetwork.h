@@ -39,6 +39,8 @@ public:
 	/// </summary>
 	void feedForward();
 
+	void backPropagate();
+
 	/// <summary>
 	/// Sets the errors.
 	/// </summary>
@@ -56,6 +58,8 @@ private:
 	vector<Layer*> layers;
 
 	vector<Matrix*> weightMatrices;
+
+	vector<Matrix*> gradientMatrices;
 
 	vector<double> input;
 

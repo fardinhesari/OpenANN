@@ -102,7 +102,7 @@
       <SubSystem>Windows</SubSystem>
       <AdditionalLibraryDirectories>C:\Users\Fardin\source\repos\OpenANN\Src\OpenANN\x64\Debug;$(VCInstallDir)UnitTest\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
       <NoEntryPoint>false</NoEntryPoint>
-      <AdditionalDependencies>neuralnetwork.obj;layer.obj;neuron.obj;matrix.obj;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>matrixtovector.obj;matrixMultiply.obj;neuralnetwork.obj;layer.obj;neuron.obj;matrix.obj;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
