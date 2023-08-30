@@ -1,25 +1,23 @@
 #include "Neuron.h"
 
-Neuron::Neuron(double val)
+#include "Activators/ActivatorUtils.h"
+
+Neuron::Neuron(double val):Neuron(val, createDefaultActivator(this))
+{}
+
+Neuron::Neuron(double val, ActivatorType* activatorType) : Neuron(val, createActivatorByEnumType(this, activatorType))
+{}
+
+Neuron::Neuron(double val, Activator* activator)
 {
 	this->value = val;
-	activate();
-	derive();
-}
-
-void Neuron::activate()
-{
-	activatedValue = value / (1 + abs(value));
-}
- 
-void Neuron::derive()
-{
-	derivedValue = activatedValue * (1 - activatedValue);
+	this->_activator = activator;
+	setValue(val);
 }
 
 void Neuron::setValue(double val)
 {
 	this->value = val;
-	activate();
-	derive();
+	activatedValue = _activator->getActivatedValue();
+	derivedValue = _activator->getDerivedValue();
 }

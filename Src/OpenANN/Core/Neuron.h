@@ -3,8 +3,10 @@
 #include <iostream>
 #include <math.h>
 
-using namespace  std;
+#include "Activators/Activator.h"
+#include "Activators/ActivatorTypes.h"
 
+using namespace  std;
 
 /// <summary>
 /// Basic class for a neuron
@@ -15,23 +17,24 @@ public:
 
 
 	/// <summary>
-	/// Initializes a new instance of the <see cref="Neuron"/> class.
+	/// Initializes a new instance of the <see cref="Neuron"/> class with default sigmoid activator.
 	/// </summary>
 	/// <param name="val">The value of Neuron.</param>
 	Neuron(double val);
 
 	/// <summary>
-	/// Fast sigmoid function.\n
-	///	f(x) = x / (1 + |x|)
+	/// Initializes a new instance of the <see cref="Neuron"/> class with specified activator.
 	/// </summary>
-	void activate();
+	/// <param name="val">The value.</param>
+	/// <param name="activator">The activator object.</param>
+	Neuron(double val, Activator* activator);
 
 	/// <summary>
-	/// Derivative of neuron.\n
-	///	f'(x) = f(x) * (1 - f(x)).
+	/// Initializes a new instance of the <see cref="Neuron"/> class based on specified activator.
 	/// </summary>
-	void derive();
-
+	/// <param name="val">The value.</param>
+	/// <param name="activatorType">Type of the activator.</param>
+	Neuron(double val, ActivatorType* activatorType);
 
 	/// <summary>
 	/// Gets the value.
@@ -51,24 +54,18 @@ public:
 	/// <returns></returns>
 	double getDerivedValue() const {return derivedValue;}
 
+	/// <summary>
+	/// Sets the value of neuron and updates derived and activated values by activator obejct.
+	/// </summary>
+	/// <param name="value">The value.</param>
 	void setValue(double value);
 private:
-	/// <summary>
-	/// The real value of neuron.
-	/// </summary>
 	double value;
 
-	/// <summary>
-	/// The value passed to next neurons.\n
-	///	Value between 0 and 1.
-	/// </summary>
 	double activatedValue;
 
-
-	/// <summary>
-	/// The derivative of current neuron.
-	/// </summary>
 	double derivedValue;
 
+	Activator* _activator;
 };
 

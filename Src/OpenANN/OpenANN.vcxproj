@@ -20,6 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Core\Activators\Activator.h" />
+    <ClInclude Include="Core\Activators\ActivatorTypes.h" />
+    <ClInclude Include="Core\Activators\ActivatorUtils.h" />
+    <ClInclude Include="Core\Activators\ReluActivator.h" />
+    <ClInclude Include="Core\Activators\SigmoidActivator.h" />
+    <ClInclude Include="Core\Activators\TanhActivator.h" />
     <ClInclude Include="Core\Layer.h" />
     <ClInclude Include="Core\Matrix.h" />
     <ClInclude Include="Core\NeuralNetwork.h" />
@@ -28,6 +33,10 @@
     <ClInclude Include="Utils\MatrixToVector.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Core\Activators\ActivatorUtils.cpp" />
+    <ClCompile Include="Core\Activators\ReluActivator.cpp" />
+    <ClCompile Include="Core\Activators\SigmoidActivator.cpp" />
+    <ClCompile Include="Core\Activators\TanhActivator.cpp" />
     <ClCompile Include="Core\Layer.cpp" />
     <ClCompile Include="Core\Main.cpp" />
     <ClCompile Include="Core\Matrix.cpp" />

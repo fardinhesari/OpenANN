@@ -9,8 +9,6 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenANN", "Src\OpenANN\Open
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Tests", "Tests", "{70A14633-FF0F-431A-9F67-1422B6F5C5B0}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "OpenANN.Tests", "Tests\OpenANN.Tests\OpenANN.Tests.vcxproj", "{10D4A462-0185-47D3-B248-09AE3C0BD3DB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -27,21 +25,12 @@ Global
 		{01C0D575-3AB7-4BAC-8826-B4C9B6DA3148}.Release|x64.Build.0 = Release|x64
 		{01C0D575-3AB7-4BAC-8826-B4C9B6DA3148}.Release|x86.ActiveCfg = Release|Win32
 		{01C0D575-3AB7-4BAC-8826-B4C9B6DA3148}.Release|x86.Build.0 = Release|Win32
-		{10D4A462-0185-47D3-B248-09AE3C0BD3DB}.Debug|x64.ActiveCfg = Debug|x64
-		{10D4A462-0185-47D3-B248-09AE3C0BD3DB}.Debug|x64.Build.0 = Debug|x64
-		{10D4A462-0185-47D3-B248-09AE3C0BD3DB}.Debug|x86.ActiveCfg = Debug|Win32
-		{10D4A462-0185-47D3-B248-09AE3C0BD3DB}.Debug|x86.Build.0 = Debug|Win32
-		{10D4A462-0185-47D3-B248-09AE3C0BD3DB}.Release|x64.ActiveCfg = Release|x64
-		{10D4A462-0185-47D3-B248-09AE3C0BD3DB}.Release|x64.Build.0 = Release|x64
-		{10D4A462-0185-47D3-B248-09AE3C0BD3DB}.Release|x86.ActiveCfg = Release|Win32
-		{10D4A462-0185-47D3-B248-09AE3C0BD3DB}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{01C0D575-3AB7-4BAC-8826-B4C9B6DA3148} = {775EDFF2-1452-4894-B90D-26FBD4DB960F}
-		{10D4A462-0185-47D3-B248-09AE3C0BD3DB} = {70A14633-FF0F-431A-9F67-1422B6F5C5B0}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A18A341E-A494-47FC-84EC-8FDF711368EA}

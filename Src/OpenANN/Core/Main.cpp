@@ -1,14 +1,14 @@
 #include <iostream>
 
-#include "Matrix.h"
-#include "NeuralNetwork.h"
-#include "Neuron.h"
+//#include "Matrix.h"
+//#include "NeuralNetwork.h"
+//#include "Neuron.h"
 
 using namespace std;
 
 int main(int argc, char** argv)
 {
-	vector<int> topology;
+	/*vector<int> topology;
 	topology.push_back(3);
 	topology.push_back(2);
 	topology.push_back(3);
@@ -38,7 +38,7 @@ int main(int argc, char** argv)
 		cout << endl << endl << "Error:\t" << nn->getError() << endl;
 	} while (abs(nn->getError()) > 0.05);
 
-	nn->printToConsole();
+	nn->printToConsole();*/
 
 	return 0;
 }
