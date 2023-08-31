@@ -36,19 +36,7 @@
     <ClInclude Include="Utils\MatrixToVector.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="Core\Activators\Activator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Activators\SigmoidActivator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Activators\TanhActivator.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="Core\Activators\ActivatorTypes.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="Core\Activators\ReluActivator.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Core\Activators\ActivatorUtils.h">
@@ -75,15 +63,6 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Utils\MatrixToVector.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\Activators\SigmoidActivator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\Activators\TanhActivator.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="Core\Activators\ReluActivator.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="Core\Activators\ActivatorUtils.cpp">

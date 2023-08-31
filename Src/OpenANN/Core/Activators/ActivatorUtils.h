@@ -1,9 +1,15 @@
 #pragma once
 #include "ActivatorTypes.h"
 
+using getActivatedValueFunctor = double(*)(double&);
+using getDerivedValueFunctor = double(*)(double& value, double& activatedValue);
 
-Activator* createActivatorByEnumType(Neuron* owner, const ActivatorType* type);
+getActivatedValueFunctor getActivatedValueFunctorByEnumType(ActivatorType type);
 
-Activator* createDefaultActivator(Neuron* owner);
+getActivatedValueFunctor getDefaultActivatedValueFunctor();
+
+getDerivedValueFunctor getDerivedValueFunctorByEnumType(ActivatorType type);
+
+getDerivedValueFunctor getDefaultDerivedValueFunctor();
 
 

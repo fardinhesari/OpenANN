@@ -2,22 +2,25 @@
 
 #include "Activators/ActivatorUtils.h"
 
-Neuron::Neuron(double val):Neuron(val, createDefaultActivator(this))
+Neuron::Neuron(double val):Neuron(val, getDefaultActivatedValueFunctor(), getDefaultDerivedValueFunctor())
 {}
 
-Neuron::Neuron(double val, ActivatorType* activatorType) : Neuron(val, createActivatorByEnumType(this, activatorType))
+Neuron::Neuron(double val, ActivatorType activatorType) : Neuron(val, getActivatedValueFunctorByEnumType(activatorType),
+																		getDerivedValueFunctorByEnumType(activatorType))
 {}
 
-Neuron::Neuron(double val, Activator* activator)
+Neuron::Neuron(double val, getActivatedValueFunctor activator, getDerivedValueFunctor deriveActivator)
 {
-	this->value = val;
-	this->_activator = activator;
+	this->activatedValueFunctor = activator;
+	this->derivedValueFunctor = deriveActivator;
+
 	setValue(val);
 }
+
 
 void Neuron::setValue(double val)
 {
 	this->value = val;
-	activatedValue = _activator->getActivatedValue();
-	derivedValue = _activator->getDerivedValue();
+	activatedValue = activatedValueFunctor(value);
+	derivedValue = derivedValueFunctor(value, derivedValue);
 }

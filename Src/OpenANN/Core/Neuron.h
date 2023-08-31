@@ -1,10 +1,7 @@
 #pragma once
 
-#include <iostream>
-#include <math.h>
-
-#include "Activators/Activator.h"
 #include "Activators/ActivatorTypes.h"
+#include "Activators/ActivatorUtils.h"
 
 using namespace  std;
 
@@ -27,14 +24,14 @@ public:
 	/// </summary>
 	/// <param name="val">The value.</param>
 	/// <param name="activator">The activator object.</param>
-	Neuron(double val, Activator* activator);
+	Neuron(double val, getActivatedValueFunctor activator, getDerivedValueFunctor deriveActivator);
 
 	/// <summary>
 	/// Initializes a new instance of the <see cref="Neuron"/> class based on specified activator.
 	/// </summary>
 	/// <param name="val">The value.</param>
 	/// <param name="activatorType">Type of the activator.</param>
-	Neuron(double val, ActivatorType* activatorType);
+	Neuron(double val, ActivatorType activatorType);
 
 	/// <summary>
 	/// Gets the value.
@@ -66,6 +63,9 @@ private:
 
 	double derivedValue;
 
-	Activator* _activator;
+	getActivatedValueFunctor activatedValueFunctor;
+
+	getDerivedValueFunctor derivedValueFunctor;
+
 };
 

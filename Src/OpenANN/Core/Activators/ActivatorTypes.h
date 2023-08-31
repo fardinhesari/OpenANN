@@ -1,9 +1,5 @@
 #pragma once
 
-#include "Activator.h"
-#include "ReluActivator.h"
-#include "SigmoidActivator.h"
-#include "TanhActivator.h"
 
 
 enum ActivatorType
